@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.4.2-orange)
+![Astro](https://img.shields.io/badge/Astro-6.4.4-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -169,27 +169,27 @@ const SITE_LANG = "zh_CN";
 ```
 src/
 ├── config/
-│   ├── index.ts              # Индексный файл конфигурации
-│   ├── siteConfig.ts         # Базовая конфигурация сайта
-│   ├── backgroundWallpaper.ts # Конфигурация фоновых обоев
-│   ├── profileConfig.ts      # Конфигурация профиля пользователя
-│   ├── commentConfig.ts      # Конфигурация системы комментариев
-│   ├── announcementConfig.ts # Конфигурация объявлений
-│   ├── licenseConfig.ts      # Конфигурация лицензии
-│   ├── footerConfig.ts       # Конфигурация подвала
-│   ├── FooterConfig.html     # HTML-контент подвала
-│   ├── expressiveCodeConfig.ts # Конфигурация подсветки кода
-│   ├── effectsConfig.ts      # Конфигурация анимационных эффектов (сакура и др.)
-│   ├── fontConfig.ts         # Конфигурация шрифтов
-│   ├── sidebarConfig.ts      # Конфигурация макета боковой панели
-│   ├── navBarConfig.ts       # Конфигурация навигационной панели
-│   ├── musicConfig.ts        # Конфигурация музыкального плеера
-│   ├── pioConfig.ts          # Конфигурация маскота
-│   ├── adConfig.ts           # Конфигурация рекламы
-│   ├── friendsConfig.ts      # Конфигурация дружественных ссылок
-│   ├── galleryConfig.ts      # Конфигурация галереи
-│   ├── sponsorConfig.ts      # Конфигурация спонсоров
-│   └── coverImageConfig.ts   # Конфигурация обложек статей
+│   ├── index.ts                  # Индексный файл конфигурации
+│   ├── siteConfig.ts             # Базовая конфигурация сайта
+│   ├── analyticsConfig.ts        # Конфигурация аналитики
+│   ├── announcementConfig.ts     # Конфигурация объявлений
+│   ├── backgroundWallpaper.ts    # Конфигурация фоновых обоев
+│   ├── commentConfig.ts          # Конфигурация системы комментариев
+│   ├── coverImageConfig.ts       # Конфигурация обложек статей
+│   ├── effectsConfig.ts          # Конфигурация анимационных эффектов (сакура и др.)
+│   ├── expressiveCodeConfig.ts   # Конфигурация подсветки кода
+│   ├── fontConfig.ts             # Конфигурация шрифтов
+│   ├── footerConfig.ts           # Конфигурация подвала
+│   ├── friendsConfig.ts          # Конфигурация дружественных ссылок
+│   ├── galleryConfig.ts          # Конфигурация галереи
+│   ├── licenseConfig.ts          # Конфигурация лицензии
+│   ├── musicConfig.ts            # Конфигурация музыкального плеера
+│   ├── navBarConfig.ts           # Конфигурация навигационной панели
+│   ├── pioConfig.ts              # Конфигурация маскота
+│   ├── plantumlConfig.ts         # Конфигурация диаграмм PlantUML
+│   ├── profileConfig.ts          # Конфигурация профиля пользователя
+│   ├── sidebarConfig.ts          # Конфигурация макета боковой панели
+│   └── sponsorConfig.ts          # Конфигурация спонсоров
 ```
 
 
@@ -214,7 +214,7 @@ comment: true    # Включить комментарии
 
 Помимо поддержки [GitHub Flavored Markdown](https://github.github.com/gfm/) по умолчанию в Astro, есть несколько дополнительных функций Markdown:
 
-- Предупреждающие блоки (Admonitions) - Поддержка тем GitHub, Obsidian и VitePress ([Предпросмотр и использование](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- Предупреждающие блоки (Admonitions) - Поддержка тем GitHub, Obsidian, VitePress и Docusaurus ([Предпросмотр и использование](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - Карточки репозиториев GitHub ([Предпросмотр и использование](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - Улучшенные блоки кода на основе Expressive Code ([Предпросмотр](http://firefly.cuteleaf.cn/posts/code-examples/) / [Документация](https://expressive-code.com/))
 

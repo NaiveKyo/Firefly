@@ -3,6 +3,8 @@
 
 // 类型导出
 export type {
+	AdConfig,
+	AnalyticsConfig,
 	AnnouncementConfig,
 	BackgroundWallpaperConfig,
 	CommentConfig,
@@ -24,8 +26,9 @@ export type {
 	SponsorMethod,
 	WidgetComponentConfig,
 	WidgetComponentType,
+	WidgetSpecificConfig,
 } from "../types/config";
-export { adConfig1, adConfig2 } from "./adConfig"; // 广告配置
+export { analyticsConfig } from "./analyticsConfig"; // 统计分析配置
 export { announcementConfig } from "./announcementConfig"; // 公告配置
 // 样式配置
 export { backgroundWallpaper } from "./backgroundWallpaper"; // 背景壁纸配置
@@ -49,4 +52,4 @@ export { profileConfig } from "./profileConfig"; // 用户资料配置
 export { sidebarLayoutConfig } from "./sidebarConfig"; // 侧边栏布局配置
 // 核心配置
 export { siteConfig } from "./siteConfig"; // 站点基础配置
-export { sponsorConfig } from "./sponsorConfig"; // 赞助配置
+export { sponsorConfig } from "./sponsorConfig"; // 打赏配置

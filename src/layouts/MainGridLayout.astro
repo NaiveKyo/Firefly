@@ -556,7 +556,50 @@ const bannerCarouselInterval = Math.max(
                 newSlot.innerHTML = frames[nextIndex];
                 oldSlot.parentNode.insertBefore(newSlot, oldSlot.nextSibling);
 
-                // 双 rAF：确保 opacity:0 已绘制，然后同时触发淡入 + Ken Burns
+                // 获取 LQIP 占位和图片元素
+                var placeholder = newSlot.querySelector('.lqip-placeholder');
+                var img = newSlot.querySelector('img');
+
+                // 利用 LQIP 做过渡桥接：立即开始交叉淡入淡出，不再等图片加载
+                // LQIP 渐变作为新层的"底色"遮住旧图，消除两张图同时可见的重影
+                var oldSlotRemoved = false;
+                function removeOldSlot() {
+                    if (!oldSlotRemoved && oldSlot.parentNode) {
+                        oldSlot.parentNode.removeChild(oldSlot);
+                        oldSlotRemoved = true;
+                    }
+                }
+
+                function showFullResImage() {
+                    if (img) {
+                        // 确保图片有过渡效果，从 LQIP 上方平滑淡入
+                        if (!img.style.transition) {
+                            img.style.transition = 'opacity 0.8s ease-out';
+                        }
+                        img.style.opacity = '1';
+                    }
+                    // 延迟隐藏 LQIP，让图片有时间完全显示
+                    if (placeholder) {
+                        setTimeout(function() {
+                            placeholder.classList.add('loaded');
+                        }, 200);
+                    }
+                }
+
+                if (img && img.complete && img.naturalWidth > 0) {
+                    // 图片已缓存：直接显示全分辨率，跳过 LQIP 阶段
+                    showFullResImage();
+                } else if (img) {
+                    // 图片未加载完：先显示 LQIP，加载完成后在 LQIP 上方淡入全分辨率图
+                    img.addEventListener('load', function() {
+                        showFullResImage();
+                    }, { once: true });
+                    img.addEventListener('error', function() {
+                        if (placeholder) placeholder.classList.add('loaded');
+                    }, { once: true });
+                }
+
+                // 立即开始交叉淡入淡出（LQIP 已就绪，可作为过渡层）
                 requestAnimationFrame(function() {
                     requestAnimationFrame(function() {
                         newSlot.style.opacity = '1';
@@ -566,7 +609,7 @@ const bannerCarouselInterval = Math.max(
 
                 // 淡入完成后：移除旧层，清理 transition（避免影响后续动画）
                 setTimeout(function() {
-                    if (oldSlot.parentNode) oldSlot.parentNode.removeChild(oldSlot);
+                    removeOldSlot();
                     newSlot.style.transition = '';
                 }, FADE_MS + 50);
             }
@@ -677,7 +720,7 @@ const bannerCarouselInterval = Math.max(
         <div class="banner-page-title-overlay absolute inset-0 z-20 hidden lg:flex items-center justify-center pointer-events-none">
             <div class="w-4/5 lg:w-3/4 text-center mb-0">
                 <div class="banner-page-title font-bold text-white leading-tight inline-flex items-center justify-center gap-3">
-                    {/* <Icon name="material-symbols:bookmark-rounded" class="banner-page-title-icon" /> */}
+                    {/* <Icon is:inline name="material-symbols:bookmark-rounded" class="banner-page-title-icon" /> */}
                     <span class="banner-page-title-text">{title}</span>
                 </div>
             </div>
@@ -694,19 +737,19 @@ const bannerCarouselInterval = Math.max(
                     </div>
                     <div class="banner-post-meta-list flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-white/90 text-sm md:text-base">
                         <span class="inline-flex items-center gap-1.5">
-                            <Icon name="material-symbols:calendar-month-outline-rounded" class="text-[1.05em]" />
+                            <Icon is:inline name="material-symbols:calendar-month-outline-rounded" class="text-[1.05em]" />
                             <span>{i18n(I18nKey.publishedAt)} {formatDateToYYYYMMDD(bannerPostMeta.published)}</span>
                         </span>
                         {bannerPostMeta.updated &&
                             bannerPostMeta.updated.getTime() !== bannerPostMeta.published.getTime() && (
                                 <span class="inline-flex items-center gap-1.5">
-                                    <Icon name="material-symbols:update-rounded" class="text-[1.05em]" />
+                                    <Icon is:inline name="material-symbols:update-rounded" class="text-[1.05em]" />
                                     <span>{i18n(I18nKey.updatedAt)} {formatDateToYYYYMMDD(bannerPostMeta.updated)}</span>
                                 </span>
                             )}
                         {typeof bannerPostMeta.words === "number" && (
                             <span class="inline-flex items-center gap-1.5">
-                                <Icon name="material-symbols:ink-pen-outline-rounded" class="text-[1.05em]" />
+                                <Icon is:inline name="material-symbols:ink-pen-outline-rounded" class="text-[1.05em]" />
                                 <span>
                                     {bannerPostMeta.words} {i18n(bannerPostMeta.words === 1 ? I18nKey.wordCount : I18nKey.wordsCount)}
                                 </span>
@@ -714,7 +757,7 @@ const bannerCarouselInterval = Math.max(
                         )}
                         {typeof bannerPostMeta.minutes === "number" && (
                             <span class="inline-flex items-center gap-1.5">
-                                <Icon name="material-symbols:schedule-outline-rounded" class="text-[1.05em]" />
+                                <Icon is:inline name="material-symbols:schedule-outline-rounded" class="text-[1.05em]" />
                                 <span>
                                     {bannerPostMeta.minutes} {i18n(bannerPostMeta.minutes === 1 ? I18nKey.minuteCount : I18nKey.minutesCount)} · {i18n(I18nKey.readTime)}
                                 </span>

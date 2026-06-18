@@ -1,6 +1,7 @@
 <script lang="ts">
 import { onMount } from "svelte";
 
+import { siteConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import { getPostUrlBySlug } from "@/utils/url-utils";
@@ -167,8 +168,7 @@ onMount(async () => {
 
 	groups = groupedPostsArray;
 
-	// 默认只展开最近一年，其他年份折叠
-	if (groupedPostsArray.length > 1) {
+	if (siteConfig.foldArticle !== false && groupedPostsArray.length > 1) {
 		collapsedYears = new Set(groupedPostsArray.slice(1).map((g) => g.year));
 	}
 
@@ -237,7 +237,7 @@ onMount(async () => {
 				<div class="w-[70%] md:w-[80%] transition text-left text-50 flex items-center gap-2
 				            group-hover/yr:text-(--primary)">
 					{group.posts.length} {i18n(group.posts.length === 1 ? I18nKey.postCount : I18nKey.postsCount)}
-					<span class="archive-arrow">
+					<span class="archive-arrow" style={collapsedYears.has(group.year) ? 'transform: rotate(-90deg)' : ''}>
 						<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
 							<path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>

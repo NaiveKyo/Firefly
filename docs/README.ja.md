@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.4.2-orange)
+![Astro](https://img.shields.io/badge/Astro-6.4.4-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -168,27 +168,27 @@ const SITE_LANG = "zh_CN";
 ```
 src/
 ├── config/
-│   ├── index.ts              # 設定インデックスファイル
-│   ├── siteConfig.ts         # サイト基本設定
-│   ├── backgroundWallpaper.ts # 背景壁紙設定
-│   ├── profileConfig.ts      # ユーザープロフィール設定
-│   ├── commentConfig.ts      # コメントシステム設定
-│   ├── announcementConfig.ts # お知らせ設定
-│   ├── licenseConfig.ts      # ライセンス設定
-│   ├── footerConfig.ts       # フッター設定
-│   ├── FooterConfig.html     # フッターHTMLコンテンツ
-│   ├── expressiveCodeConfig.ts # コードハイライト設定
-│   ├── effectsConfig.ts      # アニメーションエフェクト設定（桜など）
-│   ├── fontConfig.ts         # フォント設定
-│   ├── sidebarConfig.ts      # サイドバーレイアウト設定
-│   ├── navBarConfig.ts       # ナビゲーションバー設定
-│   ├── musicConfig.ts        # 音楽プレーヤー設定
-│   ├── pioConfig.ts          # マスコット設定
-│   ├── adConfig.ts           # 広告設定
-│   ├── friendsConfig.ts      # 友人リンク設定
-│   ├── galleryConfig.ts      # ギャラリー設定
-│   ├── sponsorConfig.ts      # スポンサー設定
-│   └── coverImageConfig.ts   # 記事カバー画像設定
+│   ├── index.ts                  # 設定インデックスファイル
+│   ├── siteConfig.ts             # サイト基本設定
+│   ├── analyticsConfig.ts        # アナリティクス設定
+│   ├── announcementConfig.ts     # お知らせ設定
+│   ├── backgroundWallpaper.ts    # 背景壁紙設定
+│   ├── commentConfig.ts          # コメントシステム設定
+│   ├── coverImageConfig.ts       # カバー画像設定
+│   ├── effectsConfig.ts          # アニメーションエフェクト設定（桜など）
+│   ├── expressiveCodeConfig.ts   # コードハイライト設定
+│   ├── fontConfig.ts             # フォント設定
+│   ├── footerConfig.ts           # フッター設定
+│   ├── friendsConfig.ts          # 友人リンク設定
+│   ├── galleryConfig.ts          # ギャラリー設定
+│   ├── licenseConfig.ts          # ライセンス設定
+│   ├── musicConfig.ts            # 音楽プレーヤー設定
+│   ├── navBarConfig.ts           # ナビゲーションバー設定
+│   ├── pioConfig.ts              # マスコット設定
+│   ├── plantumlConfig.ts         # PlantUML図表設定
+│   ├── profileConfig.ts          # ユーザープロフィール設定
+│   ├── sidebarConfig.ts          # サイドバーレイアウト設定
+│   └── sponsorConfig.ts          # スポンサー設定
 ```
 
 ## ⚙️ 記事のFrontmatter
@@ -212,7 +212,7 @@ comment: true    # コメントを有効化
 
 Astroがデフォルトで対応している[GitHub Flavored Markdown](https://github.github.com/gfm/)に加えて、いくつかの追加のMarkdown機能があります：
 
-- Admonitions（予告ブロック） - GitHub、Obsidian、VitePressの3つのテーマ設定をサポート ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
+- Admonitions（予告ブロック） - GitHub、Obsidian、VitePress、Docusaurusの4つのテーマ設定をサポート ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - GitHubリポジトリカード ([プレビューと使用方法](https://firefly.cuteleaf.cn/posts/markdown-extended/))
 - Expressive Codeベースの強化コードブロック ([プレビュー](http://firefly.cuteleaf.cn/posts/code-examples/) / [ドキュメント](https://expressive-code.com/))
 

@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.4.2-orange)
+![Astro](https://img.shields.io/badge/Astro-6.4.4-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -21,7 +21,7 @@
 > 
 > ![GitHub License](https://img.shields.io/github/license/CuteLeaf/Firefly)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/CuteLeaf/Firefly)
-[![愛發電贊助](https://img.shields.io/badge/愛發電-贊助作者-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
+[![愛發電打賞](https://img.shields.io/badge/愛發電-打賞作者-ff69b4.svg)](https://ifdian.net/a/cuteleaf)
 
 </div>
 
@@ -171,27 +171,27 @@ const SITE_LANG = "zh_CN";
 ```
 src/
 ├── config/
-│   ├── index.ts              # 配置索引檔案
-│   ├── siteConfig.ts         # 站點基礎配置
-│   ├── backgroundWallpaper.ts # 背景桌布配置
-│   ├── profileConfig.ts      # 使用者資料配置
-│   ├── commentConfig.ts      # 留言系統配置
-│   ├── announcementConfig.ts # 公告配置
-│   ├── licenseConfig.ts      # 授權配置
-│   ├── footerConfig.ts       # 頁尾配置
-│   ├── FooterConfig.html     # 頁尾HTML內容
-│   ├── expressiveCodeConfig.ts # 程式碼高亮配置
-│   ├── effectsConfig.ts      # 動畫特效配置（櫻花等）
-│   ├── fontConfig.ts         # 字型配置
-│   ├── sidebarConfig.ts      # 側邊欄版面配置配置
-│   ├── navBarConfig.ts       # 導覽列配置
-│   ├── musicConfig.ts        # 音樂播放器配置
-│   ├── pioConfig.ts          # 看板娘配置
-│   ├── adConfig.ts           # 廣告配置
-│   ├── friendsConfig.ts      # 友鏈配置
-│   ├── galleryConfig.ts      # 相簿配置
-│   ├── sponsorConfig.ts      # 贊助配置
-│   └── coverImageConfig.ts   # 文章隨機封面圖配置
+│   ├── index.ts                  # 配置索引檔案
+│   ├── siteConfig.ts             # 站點基礎配置
+│   ├── analyticsConfig.ts        # 統計分析配置
+│   ├── announcementConfig.ts     # 公告配置
+│   ├── backgroundWallpaper.ts    # 背景桌布配置
+│   ├── commentConfig.ts          # 留言系統配置
+│   ├── coverImageConfig.ts       # 封面圖配置
+│   ├── effectsConfig.ts          # 動畫特效配置（櫻花等）
+│   ├── expressiveCodeConfig.ts   # 程式碼高亮配置
+│   ├── fontConfig.ts             # 字型配置
+│   ├── footerConfig.ts           # 頁尾配置
+│   ├── friendsConfig.ts          # 友鏈配置
+│   ├── galleryConfig.ts          # 相簿配置
+│   ├── licenseConfig.ts          # 授權配置
+│   ├── musicConfig.ts            # 音樂播放器配置
+│   ├── navBarConfig.ts           # 導覽列配置
+│   ├── pioConfig.ts              # 看板娘配置
+│   ├── plantumlConfig.ts         # PlantUML 圖表配置
+│   ├── profileConfig.ts          # 使用者資料配置
+│   ├── sidebarConfig.ts          # 側邊欄版面配置
+│   └── sponsorConfig.ts          # 打賞配置
 ```
 
 
