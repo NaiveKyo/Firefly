@@ -9,7 +9,7 @@ export const displaySettingsConfig: DisplaySettingsConfig = {
 	// ── 外观 (Appearance) ──────────────────────────────────
 
 	// 主题色选择器开关
-	themeColorSwitchable: true,
+	themeColorSwitchable: false,
 
 	// 文章列表布局切换开关
 	layoutSwitchable: true,
@@ -18,7 +18,7 @@ export const displaySettingsConfig: DisplaySettingsConfig = {
 	cardBorderSwitchable: true,
 
 	// 卡片风格跟随主题色开关
-	cardFollowThemeSwitchable: true,
+	cardFollowThemeSwitchable: false,
 
 	// ── 壁纸 (Wallpaper) ──────────────────────────────────
 
@@ -48,5 +48,5 @@ export const displaySettingsConfig: DisplaySettingsConfig = {
 	// ── 特效 (Effects) ────────────────────────────────────
 
 	// 樱花特效开关
-	sakuraSwitchable: true,
+	sakuraSwitchable: false,
 };
