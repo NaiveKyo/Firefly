@@ -52,25 +52,31 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	// });
 
 	// 我的及其子菜单
+  links.push(LinkPresets.Dynamic);
+  links.push(LinkPresets.Gallery);
+  links.push(LinkPresets.Anime);
+  links.push(LinkPresets.Bangumi);
+  links.push(LinkPresets.Booknav);
+  
 	links.push({
 		name: "我的",
 		url: "#",
 		icon: "material-symbols:person",
 		children: [
 			// 动态
-			LinkPresets.Dynamic,
+			// LinkPresets.Dynamic,
 
 			// 相册
-			LinkPresets.Gallery,
+			// LinkPresets.Gallery,
 
 			// 追番
-			LinkPresets.Anime,
+			// LinkPresets.Anime,
 
 			// 番组计划
-			LinkPresets.Bangumi,
+			// LinkPresets.Bangumi,
 
 			// 书签导航
-			LinkPresets.Booknav,
+			// LinkPresets.Booknav,
 		],
 	});
 
