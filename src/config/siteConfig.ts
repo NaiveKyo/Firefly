@@ -86,9 +86,9 @@ export const siteConfig: SiteConfig = {
 			alt: "🍀",
 		},
 		// 导航栏标题
-		title: "Firefly",
+		title: "Hyacinth",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
-		widthFull: false,
+		widthFull: true,
 		// 导航菜单对齐方式，left：左对齐，center：居中
 		menuAlign: "center",
 		// 导航栏图标和标题是否跟随主题色

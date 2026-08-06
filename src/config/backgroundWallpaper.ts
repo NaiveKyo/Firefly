@@ -39,22 +39,22 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 桌面背景图片（支持单张或多张随机）
 		// desktop: "assets/images/DesktopWallpaper/d1.avif",
 		desktop: [
-			"assets/images/DesktopWallpaper/d1.avif",
-			"assets/images/DesktopWallpaper/d2.avif",
-			"assets/images/DesktopWallpaper/d3.avif",
-			"assets/images/DesktopWallpaper/d4.avif",
-			"assets/images/DesktopWallpaper/d5.avif",
-			"assets/images/DesktopWallpaper/d6.avif",
+			"assets/images/DesktopWallpaper/p1.png",
+			"assets/images/DesktopWallpaper/p2.png",
+			"assets/images/DesktopWallpaper/p3.jpg",
+			"assets/images/DesktopWallpaper/p4.png",
+			"assets/images/DesktopWallpaper/p5.jpg",
+			"assets/images/DesktopWallpaper/p6.jpg",
 		],
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"assets/images/MobileWallpaper/m1.avif",
-			"assets/images/MobileWallpaper/m2.avif",
-			"assets/images/MobileWallpaper/m3.avif",
-			"assets/images/MobileWallpaper/m4.avif",
-			"assets/images/MobileWallpaper/m5.avif",
-			"assets/images/MobileWallpaper/m6.avif",
+			"assets/images/MobileWallpaper/s1.png",
+			"assets/images/MobileWallpaper/s2.jpg",
+			"assets/images/MobileWallpaper/s3.jpg",
+			"assets/images/MobileWallpaper/s4.png",
+			"assets/images/MobileWallpaper/s5.jpg",
+			"assets/images/MobileWallpaper/s6.png",
 		],
 		// 背景视频播放地址
 		// 支持单个视频路径（字符串）或多个视频循环（数组，参考上面壁纸配置）
@@ -71,7 +71,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 主页横幅文字
 		homeText: {
 			// 是否启用主页横幅文字
-			enable: true,
+			enable: false,
 			// 主页横幅主标题
 			title: "Lovely firefly!",
 			// 主页横幅主标题字体大小
@@ -116,9 +116,9 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		waves: {
 			enable: {
 				// 桌面端是否启用水波纹动画效果
-				desktop: true,
+				desktop: false,
 				// 移动端是否启用水波纹动画效果
-				mobile: true,
+				mobile: false,
 			},
 		},
 		// 渐变过渡效果配置，当水波纹关闭时自动启用，提供壁纸底部到背景色的平滑过渡
