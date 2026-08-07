@@ -12,41 +12,41 @@ export const displaySettingsConfig: DisplaySettingsConfig = {
 	themeColorSwitchable: false,
 
 	// 文章列表布局切换开关
-	layoutSwitchable: false,
+	layoutSwitchable: true,
 
 	// 卡片边框和阴影开关
-	cardBorderSwitchable: false,
+	cardBorderSwitchable: true,
 
 	// 卡片风格跟随主题色开关
-	cardFollowThemeSwitchable: false,
+	cardFollowThemeSwitchable: true,
 
 	// ── 壁纸 (Wallpaper) ──────────────────────────────────
 
 	// 壁纸模式切换开关
-	wallpaperModeSwitchable: false,
+	wallpaperModeSwitchable: true,
 
 	// 水波纹动画开关
-	wavesSwitchable: false,
+	wavesSwitchable: true,
 
 	// 渐变过渡效果开关
-	gradientSwitchable: false,
+	gradientSwitchable: true,
 
 	// 横幅标题显示开关
-	bannerTitleSwitchable: false,
+	bannerTitleSwitchable: true,
 
 	// 壁纸轮播开关
-	bannerCarouselSwitchable: false,
+	bannerCarouselSwitchable: true,
 
 	// 全屏透明模式参数调节开关
 	// 设为 false 关闭所有滑块，或用对象形式单独控制每个滑块
 	overlaySwitchable: {
-		opacity: false,
-		blur: false,
-		cardOpacity: false,
+		opacity: true,
+		blur: true,
+		cardOpacity: true,
 	},
 
 	// ── 特效 (Effects) ────────────────────────────────────
 
 	// 樱花特效开关
-	sakuraSwitchable: false,
+	sakuraSwitchable: true,
 };
