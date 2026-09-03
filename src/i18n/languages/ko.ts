@@ -13,12 +13,20 @@ export const ko: Translation = {
 	[Key.searchContent]: "내용",
 	[Key.searchViewMore]: "더 많은 결과 보기 ({count}개 더)",
 	[Key.other]: "기타",
+
+	// 네비게이션 메뉴 그룹
+	[Key.navArticles]: "글",
+	[Key.navSocial]: "소셜",
+	[Key.navMine]: "마이",
+	[Key.navAbout]: "소개",
+	[Key.navLinks]: "링크",
 	[Key.all]: "전체",
 
 	[Key.tags]: "태그",
 	[Key.categories]: "카테고리",
 	[Key.allCategories]: "모든 카테고리",
 	[Key.allTags]: "모든 태그",
+	[Key.allSeries]: "모든 시리즈",
 	[Key.recentPosts]: "최근 게시글",
 	[Key.postList]: "게시글 목록",
 	[Key.tableOfContents]: "목차",
@@ -111,10 +119,10 @@ export const ko: Translation = {
 	[Key.updatedAt]: "수정일",
 	[Key.readTime]: "읽는 시간",
 	[Key.license]: "라이선스",
-	[Key.bangumi]: "반구미",
+	[Key.bangumi]: "Bangumi",
 
 	// Bangumi Filter and Status Text
-	[Key.bangumiTitle]: "나의 반구미",
+	[Key.bangumiTitle]: "나의 Bangumi",
 	[Key.bangumiSubtitle]: "나의 ACG 기록",
 	[Key.bangumiFilterAll]: "전체",
 	[Key.bangumiFilterWatched]: "시청 완료",
@@ -176,9 +184,46 @@ export const ko: Translation = {
 	[Key.bangumiUpdatedAt]: "빌드 시각",
 	[Key.bangumiDataStatic]: "정적 데이터",
 
-	// Anime Tracking
-	[Key.anime]: "애니메이션",
-	[Key.animeSubtitle]: "저의 애니메이션 시청 기록, Bilibili와 TMDB 데이터 기반",
+	// VNDB
+	[Key.vndb]: "VNDB",
+	[Key.vndbSubtitle]: "내 VNDB 비주얼 노벨 목록",
+	[Key.vndbFilterAll]: "전체",
+	[Key.vndbFilterVoted]: "평가함",
+	[Key.vndbFilterUnvoted]: "미평가",
+	[Key.vndbFilterNotes]: "메모 있음",
+	[Key.vndbStatusWishlist]: "플레이하고 싶음",
+	[Key.vndbStatusPlaying]: "플레이 중",
+	[Key.vndbStatusFinished]: "플레이 완료",
+	[Key.vndbStatusStalled]: "보류",
+	[Key.vndbStatusDropped]: "중단",
+	[Key.vndbStatusUnknown]: "알 수 없음",
+	[Key.vndbNoData]: "데이터 없음",
+	[Key.vndbNoDataDescription]: "이 카테고리에는 항목이 없습니다",
+	[Key.vndbEmpty]: "데이터 없음",
+	[Key.vndbEmptyReason]:
+		"가능한 원인: 사용자 ID가 존재하지 않음, 목록이 비공개, 네트워크 연결 문제, 또는 API 호출 제한",
+	[Key.vndbFetchError]: "VNDB 데이터 가져오기 실패",
+	[Key.vndbFetchErrorDesc]:
+		"빌드 중 VNDB API에서 데이터를 가져오지 못했습니다. 이 페이지는 일시적으로 사용할 수 없습니다.",
+	[Key.vndbNotConfigured]: "VNDB 사용자 ID가 설정되지 않았습니다",
+	[Key.vndbNotConfiguredDesc]:
+		"src/config/siteConfig.ts에서 VNDB 사용자 ID를 설정하세요",
+	[Key.vndbLastUpdated]: "데이터 업데이트 시각",
+	[Key.vndbVotes]: "표",
+	[Key.vndbLengthVeryShort]: "매우 짧음",
+	[Key.vndbLengthShort]: "짧음",
+	[Key.vndbLengthMedium]: "중간",
+	[Key.vndbLengthLong]: "김",
+	[Key.vndbLengthVeryLong]: "매우 김",
+
+	// Anime Tracking - Bilibili
+	[Key.bilibili]: "Bilibili",
+	[Key.bilibiliSubtitle]: "저의 Bilibili 시청 목록 (애니메이션 + 드라마)",
+	[Key.bilibiliNotConfigured]: "Bilibili 데이터 소스가 설정되지 않았습니다",
+	[Key.bilibiliNotConfiguredDesc]:
+		"src/config/siteConfig.ts에서 bilibili.uid를 설정하세요",
+
+	// Anime Tracking - Shared components
 	[Key.animeTotal]: "총계",
 	[Key.animeAverageRating]: "평균 평점",
 	[Key.animeSearch]: "애니메이션 검색...",
@@ -191,20 +236,13 @@ export const ko: Translation = {
 	[Key.animeDateAsc]: "오래된 순",
 	[Key.animeNoResults]: "일치하는 애니메이션이 없습니다",
 	[Key.animeLastUpdated]: "데이터 업데이트 시각",
-	[Key.animeSource]: "출처",
 	[Key.animeEpStatus]: "진행 상황",
 	[Key.animeViewDetails]: "상세 보기",
-	[Key.animeNotConfigured]: "애니메이션 데이터 소스가 설정되지 않았습니다",
-	[Key.animeNotConfiguredDesc]:
-		"src/config/siteConfig.ts에서 Bilibili UID 또는 TMDB API 키를 설정하세요",
 	[Key.animeBilibiliAvg]: "Bilibili 평균",
-	[Key.animeTmdbAvg]: "TMDB 평균",
-	[Key.animeDualSynced]: "이중 동기화됨",
 	[Key.animeNoOverview]: "줄거리 정보 없음",
 	[Key.animeClose]: "닫기",
 	[Key.animeSynopsis]: "줄거리",
 	[Key.animeWatchNow]: "지금 시청하기",
-	[Key.animeViewTmdb]: "TMDB 상세 정보 보기",
 	[Key.animeAllWithCount]: "전체 ({count})",
 	[Key.animeTVWithCount]: "TV ({count})",
 	[Key.animeMovieWithCount]: "극장판 ({count})",
@@ -215,6 +253,36 @@ export const ko: Translation = {
 	[Key.animeTypeDrama]: "드라마",
 	[Key.animeTypeConcert]: "콘서트",
 
+	// MyAnimeList
+	[Key.mal]: "MyAnimeList",
+	[Key.malSubtitle]: "MyAnimeList 애니메이션 및 만화 목록",
+	[Key.malCategoryAnime]: "애니메이션",
+	[Key.malCategoryManga]: "만화",
+	[Key.malFilterAll]: "전체",
+	[Key.malStatusWatching]: "시청 중",
+	[Key.malStatusReading]: "읽는 중",
+	[Key.malStatusCompleted]: "시청 완료",
+	[Key.malStatusOnHold]: "보류",
+	[Key.malStatusDropped]: "중단",
+	[Key.malStatusPlanToWatch]: "보고 싶음",
+	[Key.malStatusPlanToRead]: "읽고 싶음",
+	[Key.malNoData]: "데이터 없음",
+	[Key.malNoDataDescription]: "이 카테고리에는 항목이 없습니다",
+	[Key.malEmpty]: "데이터 없음",
+	[Key.malEmptyReason]:
+		"가능한 원인: 사용자 이름이 존재하지 않음, 목록이 비공개, Client ID가 유효하지 않음, 또는 네트워크 연결 문제",
+	[Key.malFetchError]: "MyAnimeList 데이터 가져오기 실패",
+	[Key.malFetchErrorDesc]:
+		"빌드 중 MyAnimeList API에서 데이터를 가져오지 못했습니다. 사용자 이름과 Client ID를 확인하고 목록이 공개인지 확인하세요.",
+	[Key.malNotConfigured]: "MyAnimeList가 설정되지 않았습니다",
+	[Key.malNotConfiguredDesc]:
+		"src/config/siteConfig.ts에서 MyAnimeList 사용자 이름과 Client ID를 설정하세요 (목록은 공개여야 합니다)",
+	[Key.malLastUpdated]: "데이터 업데이트 시각",
+	[Key.malSeasonWinter]: "겨울",
+	[Key.malSeasonSpring]: "봄",
+	[Key.malSeasonSummer]: "여름",
+	[Key.malSeasonFall]: "가을",
+
 	// Pagination
 	[Key.paginationFirst]: "처음",
 	[Key.paginationPrev]: "이전",
@@ -224,6 +292,7 @@ export const ko: Translation = {
 	[Key.paginationOf]: "/",
 	[Key.paginationTotal]: ", 총",
 	[Key.paginationRecords]: "개",
+	[Key.paginationJump]: "지정한 페이지로 이동",
 
 	// 404 Page
 	[Key.notFound]: "404",
@@ -280,6 +349,13 @@ export const ko: Translation = {
 	[Key.noRelatedPosts]: "관련 게시글이 없습니다",
 	[Key.noRandomPosts]: "무작위 게시글이 없습니다",
 
+	// 글 시리즈
+	[Key.series]: "시리즈",
+	[Key.seriesPartOf]: "시리즈의 일부",
+	[Key.seriesPart]: "파트 {n}",
+	[Key.seriesThisArticle]: "이 글",
+	[Key.noSeries]: "시리즈가 없습니다",
+
 	// Encrypted
 	[Key.postEncrypted]: "이 게시글은 암호화되어 있습니다",
 
@@ -287,6 +363,9 @@ export const ko: Translation = {
 	[Key.wallpaperMode]: "배경화면 모드",
 	[Key.wallpaperBannerMode]: "배너 배경화면",
 	[Key.wallpaperFullscreenMode]: "전체화면 배경화면",
+	[Key.fullscreenLayout]: "전체화면 레이아웃",
+	[Key.fullscreenClassicLayout]: "클래식",
+	[Key.fullscreenHeroLayout]: "히어로",
 	[Key.wallpaperOverlayMode]: "오버레이 배경화면",
 	[Key.wallpaperNoneMode]: "배경화면 없음",
 
@@ -429,4 +508,11 @@ export const ko: Translation = {
 	[Key.videoPrev]: "이전 영상",
 	[Key.videoNext]: "다음 영상",
 	[Key.videoLoadError]: "영상을 불러오지 못했습니다",
+
+	// 몰입형 읽기
+	[Key.immersiveReading]: "몰입형 읽기",
+	[Key.enterImmersiveReading]: "몰입형 읽기 시작",
+	[Key.exitImmersiveReading]: "몰입형 읽기 종료",
+	[Key.tocExpand]: "목차 펼치기",
+	[Key.tocCollapse]: "목차 접기",
 };
