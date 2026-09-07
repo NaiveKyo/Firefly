@@ -103,7 +103,7 @@ $ rustup doc
 - Visual Code + rust analyzer
 - Zed + Rust LSP
 - neovim + LazyVim
-- 
+
 这里以 neovim 为例，macos 可以通过 brew 命令安装 neovim，然后通过 LazyVim 这个基于 lazy.nvim 的 Neovim setup 来快速开始编写 Rust 代码，后续如果对 neovim 有更深的配置定制需求也可以使用 kickstart.nvim。
 
 [Neovim plugin manager：lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -130,7 +130,7 @@ mv ~/.cache/nvim{,.bak}
 
 2、然后克隆 LazyVim 提供的预先配置好的 Neovim 的配置模版
 
-# 克隆模版仓库
+克隆模版仓库
 
 ```bash
 git clone https://github.com/LazyVim/starter ~/.config/nvim
