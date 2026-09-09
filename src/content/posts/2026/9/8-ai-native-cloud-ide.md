@@ -2,7 +2,7 @@
 title: AI-Native Cloud IDE 与 Serverless 托管平台的架构设计
 published: 2026-09-08
 description: "用户在对话里说需求，agent 在沙箱里写代码，产物直接部署成按需启停的应用。沙箱预热池、集群内 Kaniko 构建、网关请求缓冲与 Janitor 回收的设计与取舍"
-image: './8-127281223_p0.jpg'
+image: "./8-127281223_p0.jpg"
 tags: ["架构设计"]
 category: "AI"
 draft: false
@@ -222,22 +222,22 @@ spec:
   template:
     spec:
       containers:
-      - name: kaniko
-        image: gcr.io/kaniko-project/executor:v1.20.0-debug
-        args:
-        - "--context=s3://app-code-bucket/app-123.tar.gz"
-        - "--dockerfile=Dockerfile.prod"
-        - "--destination=registry.internal/apps/app-123:v1.0.0"
-        - "--cache=true"
-        - "--cache-dir=/cache"
-        volumeMounts:
-        - name: kaniko-cache
-          mountPath: /cache
+        - name: kaniko
+          image: gcr.io/kaniko-project/executor:v1.20.0-debug
+          args:
+            - "--context=s3://app-code-bucket/app-123.tar.gz"
+            - "--dockerfile=Dockerfile.prod"
+            - "--destination=registry.internal/apps/app-123:v1.0.0"
+            - "--cache=true"
+            - "--cache-dir=/cache"
+          volumeMounts:
+            - name: kaniko-cache
+              mountPath: /cache
       restartPolicy: Never
       volumes:
-      - name: kaniko-cache
-        persistentVolumeClaim:
-          claimName: kaniko-cache-pvc
+        - name: kaniko-cache
+          persistentVolumeClaim:
+            claimName: kaniko-cache-pvc
 ```
 
 `--cache=true` 配一个共享 cache 卷，让同一应用的重复部署只重建变化的层。要注意这个 PVC 是 ReadWriteOnce，多个构建 Job 并发时会互相争抢。构建量上来之后，要么换成 ReadWriteMany 的存储，要么改用 `--cache-repo` 把层缓存推到远端 registry，让 Job 之间彻底无共享。
