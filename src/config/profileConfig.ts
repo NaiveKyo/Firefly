@@ -39,11 +39,17 @@ export const profileConfig: ProfileConfig = {
 		// 	icon: "fa7-solid:envelope",
 		// 	url: "mailto:xiaye@msn.com",
 		// 	showName: false,
-		// },
+    // },
 		// {
 		// 	name: "RSS",
 		// 	icon: "fa7-solid:rss",
 		// 	url: "/rss/",
+		// 	showName: false,
+  //   },
+  //   {
+		// 	name: "Atom",
+		// 	icon: "fa7-solid:atom",
+		// 	url: "/atom/",
 		// 	showName: false,
 		// },
 	],
