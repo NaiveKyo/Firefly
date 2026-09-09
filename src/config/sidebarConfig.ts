@@ -46,7 +46,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件位置
 			position: "top",
 			// 是否在文章详情页显示
-			showOnPostPage: false,
+			showOnPostPage: true,
 		},
 		{
 			// 组件类型：公告组件
@@ -76,7 +76,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件位置
 			position: "sticky",
 			// 是否在文章详情页显示
-			showOnPostPage: false,
+			showOnPostPage: true,
 			// 组件专属配置
 			specificConfig: {
 				// 折叠阈值：当分类数量超过>5个时自动折叠
@@ -91,7 +91,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件位置
 			position: "sticky",
 			// 是否在文章详情页显示
-			showOnPostPage: false,
+			showOnPostPage: true,
 			// 组件专属配置
 			specificConfig: {
 				// 折叠阈值：当标签数量超过>10个时自动折叠
