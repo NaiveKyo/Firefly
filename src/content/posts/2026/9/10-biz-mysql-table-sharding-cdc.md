@@ -1,5 +1,5 @@
 ---
-title: 10-biz-mysql-table-sharding-cdc
+title: 业务系统 MySQL 分表以及 CDC 实践
 published: 2026-09-10
 description: "基于 Canal 的业务分表 CDC 实践复盘：主表到 12 张分表的五步法平滑迁移、分表聚合到单一 ES 索引、一源双送反向回写 MySQL 总表，以及七类异构数据类型对齐与生产踩坑清单"
 image: "./10-113497127_p0.jpg"
